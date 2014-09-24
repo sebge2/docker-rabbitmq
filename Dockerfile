@@ -8,6 +8,7 @@ MAINTAINER Mikael Gueck "gumi@iki.fi"
 # Make sure that Upstart won't try to start RabbitMQ after apt-get installs it
 # https://github.com/dotcloud/docker/issues/446
 ADD policy-rc.d /usr/sbin/policy-rc.d
+ADD rabbitmq.config /etc/rabbitmq/rabbitmq.config
 RUN /bin/chmod 755 /usr/sbin/policy-rc.d
 
 # Another way to work around Upstart problems
